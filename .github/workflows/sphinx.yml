@@ -20,7 +20,7 @@ jobs:
           export FNAME="sphinx-$RLTAG-$(uname -m)-venv-mbs"
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get update
-          sudo apt-get -y install software-properties-common xz
+          sudo apt-get -y install software-properties-common xz-utils
           sudo add-apt-repository -y ppa:deadsnakes/nightly
           sudo apt-get -y install python"$PYVER"-dev python"$PYVER"-venv
           sudo mkdir -p /root/mbs/extras
