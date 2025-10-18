@@ -25,7 +25,7 @@ jobs:
           sudo apt-get -y install python"$PYVER"-dev python"$PYVER"-venv
           sudo mkdir -p /root/mbs/extras
           sudo python"$PYVER" -m venv /root/mbs/extras/sphinx
-          sudo /root/mbs/extras/sphinx/bin/pip install sphinx recommonmark myst-parser
+          sudo /root/mbs/extras/sphinx/bin/pip install sphinx sphinx-rtd-theme recommonmark myst-parser
           sudo mv /root/mbs/extras/sphinx ./"$FNAME"
           sudo tar -cf "$FNAME".tar "$FNAME"
           sudo chown "$(whoami):$(whoami)" "$FNAME".tar
