@@ -10,3 +10,9 @@ directory that the MassOS build system expects, which is the following:
 But the version of the package has to match the Python version used in the
 MassOS build system. So these packages have to be regenerated on a newer
 version of Python.
+
+Note that while Sphinx itself is architecture-independent, some of the Python
+dependencies included in this venv distribution are compiled to native machine
+code (`.so` files). Therefore the entire distribution has to be labelled as
+architecture-specific. And currently x86_64 is the only architecture supported
+by MassOS.
