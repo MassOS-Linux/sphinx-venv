@@ -2,7 +2,7 @@ name: Generate sphinx venv (x86_64)
 
 on:
   schedule:
-    - cron: "0 4 1-31/2 * *"
+    - cron: "0 4 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,8 +16,8 @@ jobs:
       - name: Perform all steps to create the venv
         run: |
           export PYVER="$(cat PYVER)"
-          export RLTAG="py$PYVER-$(date +%Y%m%d)"
-          export FNAME="sphinx-$RLTAG-$(uname -m)-venv-mbs"
+          export RLTAG="py$PYVER-$(date +%Y%m%d)-$(uname -m)"
+          export FNAME="sphinx-$RLTAG-venv-mbs"
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get update
           sudo apt-get -y install software-properties-common xz-utils

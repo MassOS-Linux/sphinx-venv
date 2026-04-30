@@ -15,5 +15,4 @@ Note that while Sphinx itself is architecture-independent, some of the Python
 dependencies included in this venv distribution are compiled to native machine
 code (`.so` files). Therefore the entire distribution has to be labelled as
 architecture-specific. And currently x86_64 and aarch64 are the only supported
-architectures (the nightly run alternates between x86_64 on odd days of the
-month and aarch64 on even days of the month).
+architectures.
